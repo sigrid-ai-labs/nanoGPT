@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11.5"
 dependencies = [
     "datasets>=3.2.0",
+    "matplotlib>=3.10.0",
     "numpy>=2.2.2",
     "tiktoken>=0.8.0",
     "torch>=2.5.1",

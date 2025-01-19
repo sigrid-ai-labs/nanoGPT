@@ -1,3 +1,10 @@
+init:
+	export PATH="$$HOME/.local/bin:$$PATH"
+	wget -qO- https://astral.sh/uv/install.sh | sh
+	uv venv
+	. .venv/bin/activate
+	uv sync
+
 prepare-shakespeare-char:
 	uv run data/shakespeare_char/prepare.py
 
@@ -29,3 +36,9 @@ sample-inference-gpt2:
     --init_from=resume \
     --start="What is the answer to the president of South Korea?" \
     --num_samples=5 --max_new_tokens=100
+
+transformer-analysis:
+	uv run ./appendix/transformer_analysis.py
+
+chinchilla_scaling:
+	uv run ./appendix/chinchilla_scaling.py
