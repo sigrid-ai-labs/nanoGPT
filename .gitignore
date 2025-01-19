@@ -1,3 +1,6 @@
-out-shakespeare-char/
+data/out-shakespeare-char/
+data/out-gpt2/
 scripts/__pycache__/
+data/openwebtext/*.bin
+wandb/
 .DS_Store

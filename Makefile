@@ -9,3 +9,7 @@ infer-shakespeare:
 
 prepare-gpt2:
 	uv run data/openwebtext/prepare.py
+
+train-gpt2:
+	# on macbook pro
+	export OMP_NUM_THREADS=4; uv run scripts/train.py config/train_gpt2.py --compile=False
