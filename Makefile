@@ -1,4 +1,4 @@
-prepare:
+prepare-shakespeare:
 	uv run data/shakespeare_char/prepare.py
 
 train-shakespeare:
@@ -6,3 +6,6 @@ train-shakespeare:
 
 infer-shakespeare:
 	uv run scripts/sample.py --out_dir=out-shakespeare-char
+
+prepare-gpt2:
+	uv run data/openwebtext/prepare.py
